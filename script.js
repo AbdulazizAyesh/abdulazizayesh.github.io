@@ -27,7 +27,7 @@ const io = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
 // Project cards + featured box: spotlight follows cursor
-document.querySelectorAll('.card, .feature').forEach((card) => {
+document.querySelectorAll('.card, .feature,.dashboard').forEach((card) => {
   card.addEventListener('mousemove', (e) => {
     const r = card.getBoundingClientRect();
     card.style.setProperty('--mx', `${e.clientX - r.left}px`);
